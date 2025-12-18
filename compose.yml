@@ -1,0 +1,11 @@
+---
+services:
+  selenium-remote-mcp:
+    build: .
+    image: rselenium-remote-mcp:latest
+    container_name: selenium-remote-mcp
+    ports:
+      - "8000:8000"
+      - "7900:7900"
+    shm_size: '2g'
+    restart: unless-stopped
