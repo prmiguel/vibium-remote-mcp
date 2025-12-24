@@ -28,4 +28,4 @@ USER ${SEL_UID}
 ENV SE_VNC_NO_PASSWORD=true
 ENV SE_VNC_VIEW_ONLY=true
 
-RUN bash -c "cd /home/seluser && git clone https://github.com/supercorp-ai/supergateway.git && cd /home/seluser/supergateway && npm i & npm run build"
+RUN bash -c "cd /home/seluser && git clone https://github.com/supercorp-ai/supergateway.git && cd /home/seluser/supergateway && npm i && npm run build"
