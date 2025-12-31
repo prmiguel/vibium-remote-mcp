@@ -20,3 +20,7 @@ Configure
   }
 }
 ```
+
+## 🎬 Demo
+
+🎬 **[GIF Demonstration (vibium-remote - Streamable HTTP)](https://prmiguel.github.io/media/990256e8-6d06-4d50-b5c3-d60a56e52e38.gif)**
