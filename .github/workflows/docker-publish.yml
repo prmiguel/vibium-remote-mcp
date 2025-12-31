@@ -31,10 +31,6 @@ jobs:
         include:
           - image_name: "chrome"
             base_image: "selenium/standalone-chrome:4.39.0-20251202"
-          - image_name: "firefox"
-            base_image: "selenium/standalone-firefox:4.39.0-20251202"
-          - image_name: "edge"
-            base_image: "selenium/standalone-edge:4.39.0-20251202"
     permissions:
       contents: read
       packages: write

@@ -1,20 +1,20 @@
-# Selenium Remote MCP
+# Vibium Remote MCP
 
 Build
 ```sh
-docker build -t selenium-remote-mcp .
+docker compose build
 ```
 
 Run
 ```sh
-docker run -d -p 8000:8000 -p 7900:7900 selenium-remote-mcp
+docker compose up -d
 ```
 
 Configure
 ```json
 {
   "mcpServers": {
-    "selenium-remote": {
+    "vibium-remote": {
       "url": "http://<remote-ip>:8000/mcp"
     }
   }

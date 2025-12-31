@@ -1,11 +1,13 @@
 ---
 services:
-  selenium-remote-mcp:
+  vibium-remote-mcp:
     build: .
-    image: rselenium-remote-mcp:latest
-    container_name: selenium-remote-mcp
+    image: vibium-remote-mcp:latest
+    container_name: vibium-remote-mcp
     ports:
       - "8000:8000"
       - "7900:7900"
     shm_size: '2g'
+    cap_add:
+      - CAP_SYS_ADMIN
     restart: unless-stopped
