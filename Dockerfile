@@ -5,14 +5,13 @@ USER root
 
 RUN apt update && apt install curl git -y \
     && curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - \
-    && apt install nodejs -y
-
-RUN wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz \
+    && apt install nodejs -y \
+    && wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz \
     && tar -C /usr/local -xzf go1.23.4.linux-amd64.tar.gz \
     && rm go1.23.4.linux-amd64.tar.gz
 
 RUN cat <<EOF >> /etc/supervisor/conf.d/selenium.conf
-[program:remote-selenium-mcp]
+[program:vibium-remote-mcp]
 priority=20
 command=bash -c "nohup node /home/seluser/supergateway/dist/index.js --stdio '/home/seluser/vibium/clicker/bin/clicker mcp -v' --outputTransport streamableHttp --stateful --sessionTimeout 60000 --port 8000 > /tmp/supergateway.log 2>&1 &"
 stopasgroup = true
